@@ -1,0 +1,65 @@
+.add-container {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #ffffff, #f4f4fa);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(91, 91, 191, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #4b3f72;
+  margin-bottom: 30px;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-form label {
+  font-weight: 600;
+  margin: 12px 0 8px;
+  color: #333;
+  font-size: 15px;
+}
+
+.add-form input,
+.add-form textarea,
+.add-form select {
+  padding: 14px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: 0.3s ease;
+  background-color: #fdfdfd;
+}
+
+.add-form input:focus,
+.add-form textarea:focus,
+.add-form select:focus {
+  border-color: #6a67ce;
+  box-shadow: 0 0 6px rgba(106, 103, 206, 0.5);
+  outline: none;
+}
+
+.submit-btn {
+  margin-top: 26px;
+  padding: 14px;
+  background-color: #6a67ce;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #504ac5;
+}

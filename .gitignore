@@ -1,0 +1,54 @@
+        # Node modules
+        node_modules
+        .DS_Store
+        npm-debug.log
+        yarn-debug.log
+        yarn-error.log
+        .pnp
+        .pnp.js
+
+        # Environment variables
+        .env
+        .env.local
+        .env.development.local
+        .env.test.local
+        .env.production.local
+
+        # Build output for client (React app)
+        /client/build
+
+        # Uploads folder for backend
+        /server/uploads
+
+        # Docker
+        .dockerignore
+        # Docker volumes (if you were using them directly in the root)
+        # volumes/
+
+        # Logs
+        *.log
+        logs/
+
+        # IDE specific files
+        .vscode/
+        .idea/
+        *.sublime-project
+        *.sublime-workspace
+
+        # OS generated files
+        .DS_Store
+        .Trashes
+        npm-debug.log*
+        yarn-debug.log*
+        yarn-error.log*
+        # macOS
+        .DS_Store
+        .AppleDouble
+        .LSOverride
+        # Windows
+        Thumbs.db
+        ehthumbs.db
+        Desktop.ini
+        $RECYCLE.BIN/
+        *.lnk
+        

@@ -1,0 +1,273 @@
+/* src/components/InvestorProfile.css */
+
+/* Reuse main container and navbar from InvestorDashboard.css */
+.investor-profile-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar styles are reused by including InvestorDashboard.css or directly copying relevant styles */
+/* For simplicity, if you place InvestorProfile.css in the same directory and you're already importing
+   InvestorDashboard.css in your main App.js or a global stylesheet, you might not need to copy
+   all navbar styles. However, for a self-contained component, it's good practice.
+   I'll copy them here for standalone functionality. */
+
+.investor-navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.investor-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a5568;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.investor-nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.investor-nav-links a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.investor-nav-links a:hover {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Main Profile Content */
+.profile-content {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-welcome {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Card */
+.profile-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin: -70px auto 20px auto; /* Pull it up a bit */
+    border: 5px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card h2 {
+    color: #2d3748;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.profile-tagline {
+    color: #718096;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Profile Details Grid */
+.profile-details-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack on small screens */
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+@media (min-width: 600px) {
+    .profile-details-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Two columns on larger screens */
+    }
+}
+
+
+.detail-item {
+    background: #edf2f7;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.detail-item strong {
+    color: #4a5568;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-item span {
+    color: #2d3748;
+    font-size: 1.1rem;
+    word-break: break-all; /* For long IDs/emails */
+}
+
+/* Profile Actions */
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.edit-profile-btn, .change-password-btn {
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: linear-gradient(45deg, #4299e1, #3182ce);
+    color: white;
+    box-shadow: 0 4px 15px rgba(66, 153, 225, 0.3);
+}
+
+.edit-profile-btn:hover, .change-password-btn:hover {
+    background: linear-gradient(45deg, #3182ce, #2c5282);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(66, 153, 225, 0.4);
+}
+
+/* Loading and Error States */
+.profile-loading, .profile-error, .profile-no-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Adjust for navbar height */
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.profile-error {
+    color: #e53e3e; /* Red for error */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-content {
+        padding: 1rem;
+    }
+    .profile-welcome {
+        font-size: 2rem;
+    }
+    .profile-card {
+        padding: 2rem;
+    }
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem;
+        margin: -60px auto 15px auto;
+    }
+    .profile-card h2 {
+        font-size: 1.8rem;
+    }
+    .profile-actions {
+        flex-direction: column;
+    }
+    .edit-profile-btn, .change-password-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        border-radius: 15px;
+        padding: 1.5rem;
+    }
+    .profile-card::before {
+        height: 4px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+        margin: -50px auto 10px auto;
+    }
+    .profile-card h2 {
+        font-size: 1.5rem;
+    }
+    .profile-tagline {
+        font-size: 0.9rem;
+    }
+    .detail-item span {
+        font-size: 1rem;
+    }
+}

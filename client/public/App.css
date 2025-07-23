@@ -1,0 +1,18 @@
+/* client/public/App.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+.header {
+  /* ✅ FIX: Changed to a relative path */
+  background: url('/assets/hero-image.png') center/cover no-repeat;
+/* fallback color instead of broken image */
+  padding: 40px 10px;
+  color: white;
+  border-bottom: 4px solid #3b82f6;
+}
